@@ -1,0 +1,30 @@
+tricks
+    illusion of memory
+    reasoning / thinking
+        please think step by step (this is usually done by default)
+        if you toss 2 coins (1 is head, what is the chance that the other is tail) -> 2/3
+    tools (like using Math.squrt internally)
+        To use Python code to respond to the next question, just reply:
+        Python: (a python expression here)
+        Question: What's the square root of pi?
+        Python: import("math").sqrt(import("math").pi)
+    The loop
+        Step 1: Ask LLM to make progress
+        Step 2: Test to see if the goal is met
+        Step 3: If not, go to Step 1
+What is AI Agent?
+    Sam Altman "AI systems that can do work for you independently"
+    something that can act
+    early 2025 (Anthropic, Hugging Face, ...): AI systems where an LLM controls the workflow
+    late 2025 An Agent runs Tools in a loop to achieve a goal
+Context Engineering
+    Getting the right context (it was called prompt engineering but as the input became more complex this became Context Engineering)
+        system prompt: overall framing (tone, overall situation, role this llm is playing)
+        tools: description of capabilities
+        memory: resource that persist across different conversations
+        conversational history
+            user message, llm reasoning, llm replies, code generated, tools called, results of code  and tools
+        Agents.md (part of memory)
+        context window (limit): poorer results when getting bigger context, and you will get an error when the context is over the limit (usually it does compacting when the context is close to getting filled (sometimes it misses stuff that is important))
+    when info is in sub directory then it will read this md and all parent sub directories, the subdirectory md file will overwrite the parent md file
+
