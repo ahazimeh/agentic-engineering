@@ -1,0 +1,38 @@
+/login
+/init
+/context
+
+please run all tests to confirm that everything is working, bringing up the server as needed, and bringing down the server at the end
+
+/btw to run quick side question without interrupting claud's current work
+
+/compact
+/status
+
+you can use opencode
+    shift tab to switch between plan and build
+    /models
+    /connect // to sign in with different provider
+
+you can use ampcode
+    control s to switch between modes
+
+load .env on mac
+    export $(cat .env)
+    export ANTHROPIC_DEFAULT_HAIKU_MODEL="moonshotai/kimi-k2.5"
+    ANTHROPIC_DEFAULT_sonnet_MODEL="moonshotai/kimi-k2.5"
+    ANTHROPIC_DEFAULT_OPUS_MODEL="moonshotai/kimi-k2.5"
+    export ANTHROPIC_DEFAULT_BASE_URL="https://openrouter.ai/api"
+    export ANTHROPIC_DEFAULT_AUTH_TOKEN="$OPENROUTER_API_KEY"
+    export ANTHROPIC_API_KEY=""
+    
+    claude --model moonshotai/kimi-k2.5
+
+    export ANTHROPIC_DEFAULT_HAIKU_MODEL="gpt-oss"
+    ANTHROPIC_DEFAULT_sonnet_MODEL="gpt-oss"
+    ANTHROPIC_DEFAULT_OPUS_MODEL="gpt-oss"
+    export ANTHROPIC_DEFAULT_BASE_URL="http://localhost:11434"
+    export ANTHROPIC_DEFAULT_AUTH_TOKEN="ollama"
+    export ANTHROPIC_API_KEY=""
+
+    claude --model gpt-oss
