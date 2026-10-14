@@ -25,6 +25,7 @@ Context Engineering
         conversational history
             user message, llm reasoning, llm replies, code generated, tools called, results of code  and tools
         Agents.md (part of memory)
-        context window (limit): poorer results when getting bigger context, and you will get an error when the context is over the limit (usually it does compacting when the context is close to getting filled (sometimes it misses stuff that is important))
+    context window (limit): poorer results when getting bigger context, and you will get an error when the context is over the limit (usually it does compacting when the context is close to getting filled (sometimes it misses stuff that is important))
+    
     when info is in sub directory then it will read this md and all parent sub directories, the subdirectory md file will overwrite the parent md file
 
