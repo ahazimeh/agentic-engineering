@@ -1,0 +1,80 @@
+MCP
+    easy way to use tools someone else written
+    it is not efficient: can fill the context window
+
+skills is simpler and more context efficient and might replace MCP
+
+MCP Host:
+    claude code
+MCP Client:
+    inside claude code
+    code runs within mcp host
+MCP server:
+    the tools written by someone else
+
+MCP server can run locally or remotely
+    remote (SSE (legacy), Streamable HTTP)
+
+Official MCP Registry
+    https://registry.modelcontextprotocol.io/
+by anthropic
+    https://github.com/modelcontextprotocol
+mcp.so
+    context7 MCP - Up to date Docs // inform claude with the latest apis
+https://glama.ai/mcp
+    Polygon-io MCP Server // give claude code access to stock prices
+
+use context7 to summarize for me the right way to use OpenAI Agents SDK with a model other than OpenAI's models
+
+/mcp (check mcps installed)
+claude mcp remove context7
+
+Skills:
+    lightweight simple
+    progressive disclosure // reduces context overhead
+    supports running scrips locally
+    east to make and share
+
+    not as flexible
+    disovering is wild west; usually install as plugin
+    triggering a skill is ad-hoc
+
+3 levels of progressive disclosure:
+    metadata:
+        name + description: When should this skill be triggered
+    instructions
+        information with workflow, guidance, code, snippets
+    Resources + Code
+        Info that can be accessed & sctrips that can be run
+.claude folder // home directory for all projects or project folder
+.claude/
+    skills/
+        my-great-skill/
+            SKILL.md
+            otherfiles_referenced_above.md
+            scrips/
+                scripts_in_any_language_with_instructions_above.py
+the script itself stays out of context
+
+https://github.com/anthropics/skills/tree/main
+skills.sh // by vercel
+    agent-browser // launches a browser headless and navigate to do things
+    -npx skills add https://github.com/vercel-labs/agent-browser --skill agent-browser
+
+    -npm i -g agent-browser
+    -agent-browser install // it will install chromium
+    -npx skills add https://github.com/vercel-labs/agent-browser --skill agent-browser
+
+plugins (claude code):
+    bundle of features that can include MCP Servers, Skills, Commands ...
+
+    -best trade-off of context and capabilities
+    -commands are explicitly triggered
+
+    https://github.com/anthropics/claude-plugins-official
+    
+    code-review
+    code-simplifier
+    context7
+    frontend-design
+    ralph-loop

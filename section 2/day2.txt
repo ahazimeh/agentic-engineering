@@ -1,0 +1,24 @@
+/clear // equiv to starting a new session
+/config - /usage // same as /status but takes you to other tabs
+shift tab will change the mode but with opus it is unecessary
+shift o // detailed mode, see everything that is going on
+.claude file will have json for permissions
+    you can use /permissions instead of editing it directly
+you can use @ to represent the content of a file
+you can use it in the md file // @docs/PLAN.md
+    so this file will be inserted in the md file
+    so you can just write in CLAUDE.md @AGENT.md so you will have AGENTS.md all included inside CLAUDE.md
+
+flexible workflow:
+    session (resume)
+    checkpoint (rewind) // rewind conversation or code
+        but if claude ran a script that changed files then claude don't know what files were changed by this script
+/rename snarky-claude
+claude.exe --resume
+
+claude.exe --dangerously-skip-permissions
+
+/plugin install ralph-loop@claude-plugins-official
+    official plugin by anthropic
+    whenever claude finishes it gets prompted in a way where while avoiding context getting too big will repeat the task and do better and do more (agent loop is already a loop, we are calling this entire loop in an outer loop)
+    /ralph-loop:ralph-loop "please significantly improve this project. Add user manaagement, multiple kanban boards in a user, and other features to build out a comprehensive project management application, testing thouroughly as you go and maintaining strong test code coverage, and good integration tests" --max-iterations 10

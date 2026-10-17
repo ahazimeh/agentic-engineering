@@ -1,0 +1,13 @@
+
+    please use the code simplifier agent to simplify the entire code base
+
+claude.exe mcp add --transport http atlassian https://mcp.atlassian.com/v1/mcp
+
+Please tell me about jira issue pl-1
+
+make a new repo and generate a github fine grained token
+    add content, issues, pull requests permissions
+
+    claude mcp add --transport http github https://api.githubcopilot.com/mcp --header "Authorization: Bearer YOUR_GITHUB_PAT"
+
+install feature-dev plugin
