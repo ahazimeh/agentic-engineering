@@ -11,3 +11,7 @@ make a new repo and generate a github fine grained token
     claude mcp add --transport http github https://api.githubcopilot.com/mcp --header "Authorization: Bearer YOUR_GITHUB_PAT"
 
 install feature-dev plugin
+
+if claude code got stuck then maybe try a different llm or tell your agent that this is not the solution (if he tried a way and it wasn't the way to fix your issue)
+you can also use a skill for debugging
+    https://github.com/obra/superpowers/blob/main/skills/systematic-debugging
