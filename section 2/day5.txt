@@ -1,0 +1,4 @@
+general claude.md in home directory
+    add what you want to have in context for all projects
+
+cerebras provider by openrouter is fast with some extra cost

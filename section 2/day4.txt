@@ -11,6 +11,8 @@ make a new repo and generate a github fine grained token
     claude mcp add --transport http github https://api.githubcopilot.com/mcp --header "Authorization: Bearer YOUR_GITHUB_PAT"
 
 install feature-dev plugin
+    /feature-dev:feature-dev please implement jira issue pl-3 with a nextjs application in a directory called frontend, then raise a pr when done
+        It makes Claude settle the unclear decisions with you before writing code, and review the code before the PR goes up. That means fewer wrong assumptions and less rework on a big task like a whole Next.js app.
 
 if claude code got stuck then maybe try a different llm or tell your agent that this is not the solution (if he tried a way and it wasn't the way to fix your issue)
 you can also use a skill for debugging
