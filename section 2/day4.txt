@@ -12,7 +12,16 @@ make a new repo and generate a github fine grained token
 
 install feature-dev plugin
     /feature-dev:feature-dev please implement jira issue pl-3 with a nextjs application in a directory called frontend, then raise a pr when done
-        It makes Claude settle the unclear decisions with you before writing code, and review the code before the PR goes up. That means fewer wrong assumptions and less rework on a big task like a whole Next.js app.
+        feature-dev: makes Claude read the related code first, then settle unclear decisions with you before writing anything, and review the result before the PR goes up. Fewer wrong assumptions and less rework on big tasks like a whole Next.js app.
+
+        Use it when:
+            You're starting a new project or app.
+            The feature touches many files or has design choices (auth, a new module, an integration).
+
+            Don't use it for:
+
+            Questions, explanations, or quick fixes.
+            Small changes like renaming, a typo, or a one-file tweak.
 
 if claude code got stuck then maybe try a different llm or tell your agent that this is not the solution (if he tried a way and it wasn't the way to fix your issue)
 you can also use a skill for debugging
