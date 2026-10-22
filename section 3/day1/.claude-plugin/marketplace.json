@@ -1,0 +1,19 @@
+{
+    "name": "ali-tools",
+    "owner": {
+        "name": "Ali",
+        "email": "hazimeh95@gmail.com"
+    },
+    "plugins": [
+        {
+            "name": "independent-reviewer",
+            "source": "./independent-reviewer",
+            "description": "carry out an independent review of all changes since last commit",
+            "version": "1.0.0",
+            "author": {
+                "name": "Ali",
+                "email": "hazimeh95@gmail.com"
+            }
+        }
+    ]
+}

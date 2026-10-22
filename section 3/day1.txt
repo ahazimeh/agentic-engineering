@@ -1,0 +1,86 @@
+Pro Techniques fall into 2 camps:
+    chaos
+        YOLO
+        Ralph Loops
+        GSD
+        Swarms
+    Control
+        Use of files
+        Self-correcting
+        Sandboxes
+        Orchestration
+    To goal is controlled chaos
+        Deiven by project maturity and your comfort
+        Start by prioritizing control
+
+Calude Code Pro Features:
+    Make Slash commands
+    Multi-Agents and Sub-Agents
+    Agent teams
+    Hooks
+    Make a plugin
+
+!see if you need to replace OPENROUTER_API_KEY
+
+slash command
+    first way:
+        inside .claude make a dir called commands and inside it made doc-review.md
+    second way: skills by default gives you slash command
+codex cli:
+    code exec "please ..."
+
+subagents
+    /agent
+    subagent: // tools and model can be done by default if not specified
+        ---
+        name: reviewer
+        description: carry out a comprehensive review when requested
+        tools: Read, Glob, Grep
+        model: opus
+        ---
+        
+        You review the file planning/PLAN.md and write your feedback to planning/REVIEW.md
+        usage:
+            User the reviewer agent to carry out a revie
+
+// TODO research 69. subagents...
+Docs: https://code.claude.com/docs/en/sub-agents and https://code.claude.com/docs/en/memory
+    https://claude.ai/chat/e8afe35a-bd4c-47a4-a67d-4011dc1e14fb
+
+hooks
+    -event triggering something you want, like when it always tries to forget using python instead of uv, you can add a hook to be triggered everytime you call a script to use uv instead of python
+    -if it ever stopped asking you for permission it can send you a notification
+    -having a hook when claude finished doing its work
+    3 things you can do
+        -run a shell command
+        -make a prompt to claude
+        -agent you want claude to spawn a subagent
+        inside settings.json
+        ex:
+            "hooks": {
+                "Stop": [
+                    {
+                        "hooks": [
+                            {
+                                "type": "command",
+                                "command": "codex exec \"Review changes since last commit and write results to a file named planning/REVIEW.md\""
+                            }
+                        ]
+                    }
+                ]
+            }
+        you can also use /hooks to add it using command line
+plugins
+    outside claude code
+        independent-reviewer/.claude-plugin/plugin.json
+        independent-reviewer/commands/
+        independent-reviewer/skills/
+        independent-reviewer/agents/
+        independent-reviewer/hooks/hooks.jnon
+    make a marketplace
+    then go to /plugin and choose add marketplace
+    ./
+    and now you can see it in marketplace
+    choose it and choose browser plugins
+    choose it using space and press enter
+    choose install for all collaborators
