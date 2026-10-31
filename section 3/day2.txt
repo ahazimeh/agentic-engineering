@@ -1,0 +1,44 @@
+plugin can contain .mcp.json, it is a json file that describes any mcp servers that are included inside this plugin
+and .lcp.json (language server protocol), describe to claude code the rules of a programming language to validate some code you have written if it works in case you are working with a new language that claude code isn't aware about
+
+2 related concepts:
+    sandboxing:
+        more secure
+        more productive
+        avoid approval fatigue
+    remote execution:
+        more in parallel
+        already sandboxed
+        work on the go
+3 approaches for the 2 techniques:
+    0- docker // not going to be used
+    1- native sandbox (built in sandbox /sandbox)
+    2- Managed Cloud Sandbox // runs on anthropic cloud
+    3- Third Party Cloud Sandbox
+
+/sandbox
+    with auto-allow
+
+remote claude code on the web
+    claude.ai/code
+    connect to github
+
+/install-github-app
+    winget install --id GitHub.cli
+    
+        -you can use & before the command and it should work on the cloud (although it didn't work for me)
+        -claude --remote "What is 2+2"
+        -or go to claude.ai/code
+        -or go to mobile and go to code and choose new session
+        -add new issue with title and description containing what you want
+            tag it in the beginning of the description @claude
+
+3rd approach (third party cloud sandbox)
+    go to sprites.dev
+    after you sign in run sprite login
+    then type:
+        sprite create finally-worker // name I choose
+            git clone ...
+            claude // it comes pre-installed
+                // you can close claude code and rerun it to use latest modal
+        

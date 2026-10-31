@@ -14,7 +14,7 @@ flexible workflow:
     checkpoint (rewind) // rewind conversation or code
         but if claude ran a script that changed files then claude don't know what files were changed by this script
 /rename snarky-claude
-claude.exe --resume
+claude.exe --resume // you can also use /resume
 
 claude.exe --dangerously-skip-permissions
 
