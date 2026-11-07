@@ -1,0 +1,14 @@
+Best practices for large codebases & large teams
+    -Detailed AGENTS.md
+        instead of refering the document using @ you can put a link inside the md file to let claude decide whether it wants to read into it or no
+    -Consistent workflows / plugins
+    -Special skills for project techniques
+    -Good tests that don't over-mock
+    -Human reviewer; reject slop
+    -Avoid huge updates at once
+
+Claude Agent SDK
+
+uv init --bare
+uv python pin 3.13
+uv add python-dotenv requests claude-agent-sdk
