@@ -1,0 +1,30 @@
+Claude Agent Teams
+    What are they:
+        Coordinate multiple Claude Code instances
+        One acts as a Team Lead, assining tasks
+        Team-mates work and interact independently
+    When to use them:
+        Parallel research; debug with different hypotheses
+        Own independent modules
+        Own different layers (frontend, backend, etc)
+    https://code.claude.com/docs/en/agent-teams
+    Settings.json
+        {
+            "env": {
+                "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+            },
+            "teammateMode": "in-process" // tmux, auto, iterm2
+        }
+plugins:
+    frontend design
+    context7
+    playwright
+
+Create an agent team to complete the project as defined. Teams-members: a Frontend engineer, a Backend engineer, a Devops engineer. You should lead the team only; delegate all tasks to your team.
+
+SDD: Spec Driven Design
+GSD: get-shit-done
+
+/gsd-map-codebase
+
+please build the entire project, everything discussed in planning /PLAN.md
